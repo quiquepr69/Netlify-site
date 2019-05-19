@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <!-- <script src="js/contactValidation.js"></script> -->
   <title>contact</title>
 </head>
 <body>
@@ -51,14 +52,23 @@
           Contact Me!
       </div>
       <div class="card-block">
-          <form role="form" name="contact" method="POST" data-netlify="true">
+          <form role="form" class="needs-validation" action="pages/success.html" name="contact" method="" data-netlify="true">
               <div class="form-group col-lg-4">
-                  <label class="form-control-label" for="form-group-input">Name</label>
-                  <input type="text" class="form-control" id="form-group-input" name="name">
+                  <label class="form-control-label" for="validationCustom01">Name</label>
+                  <input type="text" class="form-control" id="validationCustom01" name="name" placeholder="Full Name" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter a Name.
+                  </div>
               </div>
               <div class="form-group col-lg-4">
-                  <label class="form-control-label" for="form-group-input">Email</label>
-                  <input type="text" class="form-control" id="form-group-input" name="email">
+                  <label class="form-control-label" for="validationCustomUsername">Email</label>
+                  <input type="email" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend"  name="email" required>
+                  <div class="invalid-feedback">
+                    Please enter an email.
+                  </div>
               </div>
               <div class="form-group col-lg-4">
                   <label class="form-control-label" for="form-group-input">Reason</label>
@@ -72,8 +82,8 @@
                   <label class="form-control-label" for="form-group-input">Notes</label>
                   <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
               </div>
-            </form>
             <button class="btn btn-primary ml-3 mb-3" type="submit">Send</button>
+            </form>
       </div>
     </div>
   </div>
