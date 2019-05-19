@@ -1,4 +1,8 @@
 body {
-  background: #c7c7c7;
+  background: #fff;
+}
+
+.bg-light {
+  background-color: #e3f2fd !important;
 }
 /*# sourceMappingURL=main.css.map */
